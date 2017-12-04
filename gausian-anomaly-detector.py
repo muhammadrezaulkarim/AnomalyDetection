@@ -81,6 +81,7 @@ class GaussianAnomalyDetector(BaseEstimator, ClassifierMixin):
         for i in range(numOfSamples):
             probSampleI = 1.0  # For each test sample, multiply it with the probability of each feature
 	    #compute probability of each feature with the formula of normal distribution (see below)
+	    # See formula for normal distribution here: https://en.wikipedia.org/wiki/Normal_distribution
             featureVector = X[i-1]
 
             for j in range(len(featureVector)):
@@ -91,6 +92,7 @@ class GaussianAnomalyDetector(BaseEstimator, ClassifierMixin):
                 standardDeviation = math.sqrt(self.varianceVector[j])
 
                 #compute probability of each feature with the formula of normal distribution
+		# See formula for normal distribution here: https://en.wikipedia.org/wiki/Normal_distribution
                 squaredDiff = (featureVector[j]-self.meanVector[j])*(featureVector[j]-self.meanVector[j])
                 exponentPart = math.exp(-1*(squaredDiff/(2*self.varianceVector[j])))
 
