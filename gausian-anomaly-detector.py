@@ -218,7 +218,7 @@ for i in range(NUM_RUNS):
 
 
     
-    #################Select a probability threshold and predict probability #################
+    #################Fit model and predict probability #################
     #This is for multi class classification
     classifier = GaussianAnomalyDetector()
 
