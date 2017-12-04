@@ -160,12 +160,12 @@ for i in range(NUM_RUNS):
     print("Dimension of the test data set:", dataset2.shape)  # number of rows and columns in the data set
 
     
-    dataset_data_training=dataset1.iloc[ : ,0:numOfColumns1-1] #all predictor variable
-    dataset_target_training=dataset1.iloc[ : ,numOfColumns1-1] # dependent variable. Assumption is that the last column contains 
+    dataset_data_training=dataset1.iloc[ : ,0:numOfColumns1-1] #all features
+    dataset_target_training=dataset1.iloc[ : ,numOfColumns1-1] # decision variable. The last column must contain decision variable value
 
 
-    dataset_data_test=dataset2.iloc[ : ,0:numOfColumns2-1] #all predictor variable
-    dataset_target_test=dataset2.iloc[ : ,numOfColumns2-1] # dependent variable. Assumption is that the last column contains 
+    dataset_data_test=dataset2.iloc[ : ,0:numOfColumns2-1] #all features
+    dataset_target_test=dataset2.iloc[ : ,numOfColumns2-1] # The last column must contain decision variable value
 
     print()
     print("Count of samples per class (training set):")  
