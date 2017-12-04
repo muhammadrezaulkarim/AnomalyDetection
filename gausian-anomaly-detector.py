@@ -80,6 +80,7 @@ class GaussianAnomalyDetector(BaseEstimator, ClassifierMixin):
         # This part can be parallelized with threads. Not done here though. In future, I will modify it
         for i in range(numOfSamples):
             probSampleI = 1.0  # For each test sample, multiply it with the probability of each feature
+	    #compute probability of each feature with the formula of normal distribution (see below)
             featureVector = X[i-1]
 
             for j in range(len(featureVector)):
