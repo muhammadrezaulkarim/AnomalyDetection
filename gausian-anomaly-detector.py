@@ -50,7 +50,7 @@ from sklearn.metrics import f1_score
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 
-
+#BaseEstimator, ClassifierMixin are SCIKIT-LEARN specific classes.
 class GaussianAnomalyDetector(BaseEstimator, ClassifierMixin):
 
     def __init__(self, epsilon=0.05):
