@@ -8,7 +8,7 @@
 #2. Open Anaconda Navigator. Launch 'jupyter notbook' to run python code
 
 
-# Anomaly detection algorithm using Gaussian distributions. Use the features that follow Gaussian or normal distributions. Otherwise, transformation might require (some examples are given in this file)
+# Anomaly detection algorithm using Gaussian distributions. Use the features those follow Gaussian or normal distributions. Otherwise, transformation might require (some examples are given in this file)
 # Apply it for pure anomaly detection problems only. 
 
 
