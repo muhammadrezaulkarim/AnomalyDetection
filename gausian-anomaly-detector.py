@@ -219,7 +219,6 @@ for i in range(NUM_RUNS):
 
     
     #################Fit model and predict probability #################
-    #This is for multi class classification
     classifier = GaussianAnomalyDetector()
 
     classifier.fit(X_data_training, y_data_training)
