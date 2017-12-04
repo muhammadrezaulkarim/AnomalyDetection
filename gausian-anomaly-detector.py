@@ -283,11 +283,11 @@ for i in range(0,NUM_OF_CLASSES):
     
     #for the current class, extract precision, recall and F-Measure values for each run/trial 
     for j in range(0,len(precScoreList)):
-        # Scikit learn will set the precision value to zero when no samples present for a class. 
+        # Scikit learn will set the precision value to zero when no samples present for a type. 
         precScoreArray.append(precScoreList[j][i])
-        # Scikit learn will set the recall value to zero when no samples present for a class. 
+        # Scikit learn will set the recall value to zero when no samples present for a type. 
         recallScoreArray.append(recallScoreList[j][i])
-         # Scikit learn will set the F-measure value to zero when no samples present for a class. 
+         # Scikit learn will set the F-measure value to zero when no samples present for a type. 
         fScoreArray.append(fScoreList[j][i])
    
  #	Enable this pieces of code if you want to verify content
