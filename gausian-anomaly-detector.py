@@ -235,28 +235,28 @@ for i in range(NUM_RUNS):
     #print the prediction on test sets (if needed)
     print( y_pred_test)
 
-    #get class wise precision score and store the results in a list
+    #get sample type (anomalous/non-anomalous) wise precision score and store the results in a list
     #Set 'average=None' to get class wise results
 
     precisionResult=precision_score(y_data_test,y_pred_test,average=None)
-    # Scikit learn will set the precision value to zero when no samples present for a class. 
+    # Scikit learn will set the precision value to zero when no samples present for a sample type (anomalous/non-anomalous). 
     precScoreList.append(precisionResult)
 
     recallResult=recall_score(y_data_test,y_pred_test,average=None)
-    # Scikit learn will set the recall value to zero when no samples present for a class. 
+    # Scikit learn will set the recall value to zero when no samples present for a sample type (anomalous/non-anomalous). 
     recallScoreList.append(recallResult)
   
     
     #get class wise f-measure score and store the results in a list
     fScoreResult=f1_score(y_data_test,y_pred_test, average=None)
-    # Scikit learn will set the F-measure value to zero when no samples present for a class. 
+    # Scikit learn will set the F-measure value to zero when no samples present for a sample type (anomalous/non-anomalous). 
     fScoreList.append(fScoreResult)
 
         
     print()
     print()
     print("***Scikit learn will set a metric (e.g. recall) value to zero and display a warning message ") 
-    print("when no samples present for a particular class in the test set***")
+    print("when no samples present for a particular sample type (anomalous/non-anomalous) in the test set***")
 
 # For loop ends here
 # Print the results of the lists that contain the results  
@@ -265,7 +265,7 @@ for i in range(NUM_RUNS):
 # print(fScoreList)
 
 
-NUM_OF_CLASSES=len(precScoreList[0])  # automatically determine the number of classes 
+NUM_OF_CLASSES=len(precScoreList[0])  # automatically determine the number of sample type (anomalous/non-anomalous)
 print(class_names)
 print()  
 print()  
